@@ -11,16 +11,14 @@
 
   <tbody>
     <tr>
-     <tr>
       <% @books.each do |book| %>
       <td><%= book.title %></td>
       <td><%= book.body %></td>
-     </tr>
-     <% end %>
-      <td><%= link_to 'Show' book_path(book) %></td>
-      <td><%= link_to 'Edit' edit_book_path(@book) %></td>
-      <td><%= link_to 'Destroy' destroy_book_path %></td>
+      <td><%= link_to 'Show', book_path(book) %></td>
+      <td><%= link_to 'Edit', edit_book_path(book) %></td>
+      <td><%= link_to 'Destroy', book_path(book), method: :delete %></td>
     </tr>
+    <% end %>
   </tbody>
 </table>
 
